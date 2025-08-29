@@ -14,8 +14,5 @@ return {
 		-- Keymap optional
 		vim.keymap.set("n", "zR", require("ufo").openAllFolds, { desc = "Open all folds" })
 		vim.keymap.set("n", "zM", require("ufo").closeAllFolds, { desc = "Close all folds" })
-
-		-- Untuk membuka dan menutup fold yang ada di bawah kursor.
-		vim.keymap.set("n", "za", require("ufo").toggleFoldWithCursor, { desc = "Toggle fold with cursor" })
 	end,
 }
