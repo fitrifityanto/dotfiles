@@ -7,11 +7,20 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "pindah window ke bawah", norema
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "pindah window ke atas", noremap = true, silent = true })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "pindah window ke bawah", noremap = true, silent = true })
 
-vim.keymap.set("n", "<C-w>v", ":vsplit<CR>", { desc = "pindah window ke bawah", noremap = true, silent = true })
-vim.keymap.set("n", "<C-w>s", ":split<CR>", { desc = "pindah window ke samping", noremap = true, silent = true })
+vim.keymap.set("n", "<C-w>v", ":vsplit<CR>", { desc = "split window ke bawah", noremap = true, silent = true })
+vim.keymap.set("n", "<C-w>s", ":split<CR>", { desc = "split window ke samping", noremap = true, silent = true })
 
 -- buffer
 vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Go to next buffer" })
 vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Go to previous buffer" })
 vim.keymap.set("n", "<leader>bd", "<Cmd>bd<CR>", { desc = "Close current buffer" })
 vim.keymap.set("n", "<leader>ba", "<Cmd>BufferLineCloseOthers<CR>", { desc = "close all other visible buffers " })
+
+-- menghapus highlight hasil pencarian
+vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { silent = true })
+
+--buka terminal
+vim.keymap.set("n", "<leader>t", ":terminal<CR>", { desc = "Buka terminal", noremap = true, silent = true })
+
+-- di terminal mode, keluar ke normal mode
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Keluar dari terminal mode", noremap = true, silent = true })
