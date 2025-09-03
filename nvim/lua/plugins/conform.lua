@@ -41,6 +41,7 @@ return {
 					"yamlls",
 					"taplo",
 					"jsonls",
+					"lua_ls",
 				},
 			},
 		},

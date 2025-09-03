@@ -15,6 +15,7 @@ return {
 				opts = {
 
 					ensure_installed = {
+						"lua_ls",
 						"html",
 						"cssls",
 						"ts_ls",
@@ -60,6 +61,19 @@ return {
 				local name = "DiagnosticSign" .. type
 				vim.fn.sign_define(name, { text = icon, texthl = name, numhl = "" })
 			end
+
+			lspconfig.lua_ls.setup({
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim" },
+						},
+						workspace = {
+							library = vim.api.nvim_get_runtime_file("", true),
+						},
+					},
+				},
+			})
 
 			-- Konfigurasi tsserver (JavaScript/TypeScript)
 			lspconfig.ts_ls.setup({

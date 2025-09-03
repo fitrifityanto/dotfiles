@@ -23,4 +23,4 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { silent = true })
 vim.keymap.set("n", "<leader>t", ":terminal<CR>", { desc = "Buka terminal", noremap = true, silent = true })
 
 -- di terminal mode, keluar ke normal mode
-vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Keluar dari terminal mode", noremap = true, silent = true })
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { desc = "Keluar terminal mode", noremap = true, silent = true })
