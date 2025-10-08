@@ -3,5 +3,7 @@ return {
 	version = "*",
 	cmd = "ASToggle", -- optional for lazy loading on command
 	event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
-	opts = {},
+	opts = {
+    enabled = false,
+  },
 }
